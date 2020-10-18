@@ -6,7 +6,7 @@ Teltech coding challange.
 
 Make file commands:
 
-mod - Get dependecy modules
+<code>mod - Get dependecy modules
 
 build - Build the binary file
 
