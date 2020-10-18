@@ -1,0 +1,22 @@
+# build go binary
+FROM golang:1.15.2-alpine as go
+
+# set go path and bin folders
+ENV GOPATH /go/src
+ENV GOBIN /go/bin
+
+# install dependencies
+RUN apk add --no-cache bash git openssh gcc libc-dev
+
+# copy project files
+COPY . .
+
+RUN go install ./cmd/main.go
+
+# package binary
+FROM alpine:latest
+
+# copy binary from build to /bin folder
+COPY --from=go /go/bin/main /bin
+
+ENTRYPOINT ["/bin/main"]

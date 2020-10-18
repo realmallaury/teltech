@@ -1,0 +1,15 @@
+version: '2'
+   
+services:
+    arithmetic:
+        container_name: arithmetic
+        image: arithmetic:1.0.0
+        ports:
+          - 8080:8080
+        environment:
+          - HOST=0.0.0.0:8080
+          - SHUTDOWN_TIMEOUT=5s
+          - CACHE_SIZE=1000
+          - CACHE_TTL=1m
+
+        restart: on-failure
