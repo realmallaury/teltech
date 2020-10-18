@@ -30,4 +30,4 @@ The solution can be run through docker, but cache is implemented as in memory, s
 
 Serivce accepts values of max math.MaxFloat64 size, and for larger values it returns "value out of range" and for larger result "+Inf" and "-Inf", for this reason anwser field is formated as string. To solve this limitation, service could be improved by supporting arbitraty precision arithmetic.
 
-Tests cover majority of basic cases, but detailed for cache and integration tests with random generated test tabels are needed. 
+Tests cover majority of basic cases, but detailed for test cases for ine memory cache implementation and end-to-end tests with random generated test tabels are needed.
