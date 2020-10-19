@@ -11,5 +11,6 @@ services:
           - SHUTDOWN_TIMEOUT=5s
           - CACHE_SIZE=1000
           - CACHE_TTL=1m
+          - GIN_MODE=release
 
         restart: on-failure

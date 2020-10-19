@@ -6,7 +6,9 @@ Teltech coding challange.
 
 Make file commands:
 
-<code>mod - Get dependecy modules
+<code>
+
+mod - Get dependecy modules
 
 build - Build the binary file
 
@@ -20,7 +22,9 @@ up - Start docker container
 
 down - Stop docker container
 
-help - Display this help screen</code>
+help - Display this help screen
+
+</code>
 
 To run locally: <code>go run ./cmd</code>, to run as docker container first <code>make build-docker-image</code> and then <code>make up</code> to start container and <code>make down</code> to stop & cleanup.
 
